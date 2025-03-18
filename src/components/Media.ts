@@ -250,7 +250,7 @@ export class Media {
     this.x = this.width * this.index;
   }
 
-  onTouchDown(e: MouseEvent | TouchEvent) {
+  onTouchDown() {
     if (this.videoUrl && this.onVideoClick && !this.isDragging) {
       this.onVideoClick(this.videoUrl);
     }

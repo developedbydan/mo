@@ -1,11 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { HeroHeader } from "@/components/hero-header";
+import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
+import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { TextEffect } from "@/components/motion-primitives/text-effect";
-import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
-import { HeroHeader } from "@/components/hero-header";
+import Link from "next/link";
 
 const transitionVariants = {
   item: {

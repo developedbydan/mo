@@ -97,7 +97,7 @@ export class GalleryApp {
           ndcY >= planeBottom &&
           ndcY <= planeTop
         ) {
-          media.onTouchDown(e);
+          media.onTouchDown();
         }
       });
     });

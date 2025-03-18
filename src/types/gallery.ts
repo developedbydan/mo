@@ -1,4 +1,4 @@
-import { Mesh, Renderer, Transform } from "ogl";
+import { Mesh, Renderer, Transform, Plane } from "ogl";
 
 export interface ScreenSize {
   width: number;
@@ -11,7 +11,7 @@ export interface Viewport {
 }
 
 export interface MediaProps {
-  geometry: any;
+  geometry: Plane;
   gl: Renderer["gl"];
   image: string;
   videoUrl?: string;
