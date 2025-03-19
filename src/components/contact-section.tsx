@@ -9,43 +9,43 @@ import { useState, useRef } from "react";
 import { toast } from "sonner";
 
 export default function ContactSection() {
-  const [isLoading, setIsLoading] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    };
+  //   const formData = new FormData(e.currentTarget);
+  //   const data = {
+  //     name: formData.get("name"),
+  //     email: formData.get("email"),
+  //     message: formData.get("message"),
+  //   };
 
-    try {
-      const response = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  //   try {
+  //     const response = await fetch("/api/send", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
 
-      const result = await response.json();
+  //     const result = await response.json();
 
-      if (!response.ok) {
-        throw new Error(result.error || "Failed to send message");
-      }
+  //     if (!response.ok) {
+  //       throw new Error(result.error || "Failed to send message");
+  //     }
 
-      toast("Message sent successfully!");
-      formRef.current?.reset();
-    } catch (error) {
-      toast("Failed to send message. Please try again.");
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  //     toast("Message sent successfully!");
+  //     formRef.current?.reset();
+  //   } catch (error) {
+  //     toast("Failed to send message. Please try again.");
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // };
 
   return (
     <section id="contact" className="py-20">
@@ -59,8 +59,8 @@ export default function ContactSection() {
 
         <Card className="mx-auto mt-12 max-w-lg p-8 shadow-md sm:p-16">
           <form
-            ref={formRef}
-            onSubmit={handleSubmit}
+            // ref={formRef}
+            // onSubmit={handleSubmit}
             className="**:[&>label]:block space-y-6 *:space-y-3"
           >
             <div>
@@ -78,9 +78,10 @@ export default function ContactSection() {
               <Textarea id="message" name="message" rows={3} required />
             </div>
 
-            <Button type="submit" disabled={isLoading}>
+            {/* <Button type="submit" disabled={isLoading}>
               {isLoading ? "Sending..." : "Submit"}
-            </Button>
+            </Button> */}
+            <Button>Send Message</Button>
           </form>
         </Card>
       </div>

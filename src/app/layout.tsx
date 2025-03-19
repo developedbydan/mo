@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className="font-inter bg-black" data-theme="dark">
         <main>{children}</main>
-        <Toaster />
+        {/* <Toaster /> */}
       </body>
     </html>
   );
