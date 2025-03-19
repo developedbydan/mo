@@ -29,10 +29,12 @@ export default function HeroSection() {
         <section>
           <div>
             <video
-              src="/videos/background.mp4"
+              src="/videos/background.webm"
               autoPlay
               muted
               loop
+              playsInline
+              preload="auto"
               className="-z-20 w-full h-dvh object-cover"
             />
           </div>

@@ -70,7 +70,7 @@ const Card = ({ i, src, range, targetScale, progress }: CardProps) => {
   return (
     <div
       ref={container}
-      className="cardContainer h-screen flex items-center justify-center sticky top-0"
+      className="cardContainer h-screen flex items-center justify-center sticky top-0 px-5"
     >
       <motion.div
         className="card relative w-[400px] rounded-3xl overflow-hidden cursor-pointer bg-black"

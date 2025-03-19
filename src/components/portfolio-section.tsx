@@ -5,23 +5,23 @@ import Card from "./card";
 const cards = [
   {
     id: 1,
-    src: "videos/video1.mp4",
+    src: "videos/video1.webm",
   },
   {
     id: 2,
-    src: "videos/video2.mp4",
+    src: "videos/video2.webm",
   },
   {
     id: 3,
-    src: "videos/video3.mp4",
+    src: "videos/video3.webm",
   },
   {
     id: 4,
-    src: "videos/video4.mp4",
+    src: "videos/video4.webm",
   },
   {
     id: 5,
-    src: "videos/video5.mp4",
+    src: "videos/video5.webm",
   },
 ];
 
