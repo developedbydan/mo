@@ -1,33 +1,14 @@
 import { HeroHeader } from "@/components/hero-header";
 import { TextEffect } from "@/components/ui/text-effect";
-
-const transitionVariants = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: "blur(12px)",
-      y: 12,
-    },
-    visible: {
-      opacity: 1,
-      filter: "blur(0px)",
-      y: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
-};
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section id="home">
+    <section id="home" className="overflow-x-hidden">
       <HeroHeader />
       <main className="overflow-hidden">
         <section>
-          <div>
+          <div className="hidden xl:block">
             <video
               src="/videos/background.webm"
               autoPlay
@@ -36,6 +17,15 @@ export default function HeroSection() {
               playsInline
               preload="auto"
               className="-z-20 w-full h-dvh object-cover"
+            />
+          </div>
+          <div className="xl:hidden w-full h-dvh">
+            <Image
+              src="/background.webp"
+              alt="Hero Image"
+              className="w-full h-dvh object-cover"
+              width={2000}
+              height={2000}
             />
           </div>
           <div className="absolute top-0 left-0 right-0 bottom-0 h-dvh flex justify-center pt-86 md:pt-30 2xl:pt-48 3xl:pt-72">

@@ -23,6 +23,11 @@ export const HeroHeader = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = () => {
+    setMenuState(false);
+  };
+
   return (
     <header>
       <nav
@@ -42,6 +47,7 @@ export const HeroHeader = () => {
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2"
+                onClick={handleLinkClick}
               >
                 <Logo />
               </Link>
@@ -79,6 +85,7 @@ export const HeroHeader = () => {
                       <Link
                         href={item.href}
                         className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                        onClick={handleLinkClick}
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -93,7 +100,7 @@ export const HeroHeader = () => {
                   className="lg:inline-flex"
                   variant={isScrolled ? "default" : "outline"}
                 >
-                  <Link href="#contact">
+                  <Link href="#contact" onClick={handleLinkClick}>
                     <span>Get in Touch</span>
                   </Link>
                 </Button>
