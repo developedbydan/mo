@@ -32,14 +32,19 @@ export default function PortfolioSection() {
       className="min-h-dvh w-full flex flex-col items-center relative"
     >
       <div className="h-dvh w-full flex flex-col items-center pt-32 overflow-hidden relative">
-        <ScrollVelocity
-          texts={["My Projects", "Scroll Down"]}
-          velocity={100}
-          className="custom-scroll-text"
-        />
+        <div className="block md:hidden ">
+          <h2 className="text-white text-4xl font-bold">My Projects</h2>
+        </div>
+        <div className="hidden md:block">
+          <ScrollVelocity
+            texts={["My Projects", "Scroll Down"]}
+            velocity={100}
+            className="custom-scroll-text"
+          />
+        </div>
       </div>
 
-      <div className="w-full -mt-126 2xl:-mt-60 3xl:-mt-96">
+      <div className="w-full -mt-[500px] 2xl:-mt-60 3xl:-mt-96">
         {cards.map((card, i) => (
           <Card
             key={card.id}
